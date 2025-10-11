@@ -1,4 +1,16 @@
 <?php require "includes/header.php"; ?>
+<?php require "config/config.php"; ?>
+<?php
+
+
+
+	$hotels = $conn->query("SELECT * FROM hotels WHERE status = 1");
+	$hotels->execute();
+
+	$allHotels = $hotels->fetchAll(PDO::FETCH_OBJ);
+
+
+?>
 
     <div class="hero-wrap js-fullheight" style="background-image: url('images/image_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -7,7 +19,7 @@
           <div class="col-md-7 ftco-animate">
           	<h2 class="subheading">Welcome to Vacation Rental</h2>
           	<h1 class="mb-4">Rent an appartment for your vacation</h1>
-            <p><a href="#" class="btn btn-primary">Learn more</a> <a href="#" class="btn btn-white">Contact us</a></p>
+            <p><a href="#" class="btn btn-primary">Learn more</a> <a href="<?php echo APPURL;?>/contact.php" class="btn btn-white">Contact us</a></p>
           </div>
         </div>
       </div>
@@ -249,7 +261,7 @@
 					<div class="col-md-9 text-center">
 						<h2>Ready to get started</h2>
 						<p class="mb-4">It’s safe to book online with us! Get your dream stay in clicks or drop us a line with your questions.</p>
-						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Learn More</a> <a href="#" class="btn btn-white px-4 py-3">Contact us</a></p>
+						<p class="mb-0"><a href="<?php echo APPURL;?>/about.php" class="btn btn-primary px-4 py-3">Learn More</a> <a href="#" class="btn btn-white px-4 py-3">Contact us</a></p>
 					</div>
 				</div>
 			</div>
