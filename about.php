@@ -27,7 +27,7 @@
 			<div class="container">
 				<div class="row justify-content-between">
 						<div class="col d-flex align-items-center">
-							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+00 1234 567</a> or <span class="mailus">email us:</span> <a href="#">emailsample@email.com</a></p>
+							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+62 8223 6257 695</a> or <span class="mailus">email us:</span> <a href="#">tugaswebsite108@gmail.com</a></p>
 						</div>
 						<div class="col d-flex justify-content-end">
 							<div class="social-media">
