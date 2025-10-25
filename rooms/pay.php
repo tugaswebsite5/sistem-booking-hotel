@@ -45,7 +45,7 @@
                         onApprove: (data, actions) => {
                             return actions.order.capture().then(function(orderData) {
                           
-                             window.location.href='<?php echo APPURL; ?>';
+                             window.location.href='index.php';
                             });
                         }
                         }).render('#paypal-button-container');
