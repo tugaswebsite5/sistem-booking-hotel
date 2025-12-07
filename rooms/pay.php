@@ -1,7 +1,13 @@
 <?php require "../includes/header.php"; ?>
 <?php require "../config/config.php"; ?>
 
-    <div class="container">  
+    <div class="hero-wrap js-fullheight" style="background-image: url('<?php echo APPURL;?>/images/image_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate">
+          	<h2 class="subheading">Pay Page for your Room</h2>
+               <div class="container">  
                     <!-- Replace "test" with your own sandbox Business account app client ID -->
                     <script src="https://www.paypal.com/sdk/js?client-id=AVIKAOhPLbjmswLT1FSZSbVlQC0ioVRF6H25WMTwrdHyis28zXW-ws4WEL_qGsNLkwDyHjd53Z1ue1FP&currency=USD"></script>
                     <!-- Set up a container element for the button -->
@@ -26,8 +32,12 @@
                             });
                         }
                         }).render('#paypal-button-container');
-                    </script>
-                  
-     </div>
+                </script>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
 <?php require "../includes/footer.php"; ?>
 
