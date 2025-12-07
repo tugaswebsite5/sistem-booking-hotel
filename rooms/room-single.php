@@ -38,16 +38,16 @@ if (isset($_GET['id'])) {
             $user_id = $_SESSION['id'];
             $status = "Pending";
             $payment = $singleRoom->price;
-			$days = date_diff($check_in, $check_in);
+			$days = $check_in->diff($check_out);
             
             // save price in session
-            $_SESSION['price'] = $singleRoom->price * intval($diff->format('R%a days'));
+            $_SESSION['price'] = $singleRoom->price * $num_days = $days->days;
 
             if (date("m/d/Y") > $check_in OR date("m/d/Y") > $check_out) {
                 echo "<script>alert('Pick a date that is not in the past')</script>";
             } else {
 
-                if ($check_in > $check_out OR $check_in == date("Y/m/d")) {
+                if ($check_in > $check_out OR $check_in == date("m/d/Y")) {
                     echo "<script>alert('Invalid check-in/check-out date')</script>";
                 } else {
 
@@ -67,7 +67,7 @@ if (isset($_GET['id'])) {
                         ":hotel_name" => $hotel_name,
                         ":room_name" => $room_name,
                         ":status" => $status,
-                        ":payment" => $_SESSION['$payment'],
+                        ":payment" => $_SESSION['price'],
                         ":user_id" => $user_id,
                     ]); 
 
