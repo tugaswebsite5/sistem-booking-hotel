@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
             $user_id = $_SESSION['id'];
             $status = "Pending";
             $payment = $singleRoom->price;
-			$days = $check_in->diff($check_out);
+			      $days = $check_in->diff($check_out);
             
             // save price in session
             $_SESSION['price'] = $singleRoom->price * $num_days = $days->days;
@@ -76,6 +76,8 @@ if (isset($_GET['id'])) {
             }
         }
     }
+} else {
+    echo "<script>window.location.href='".APPURL."/404.php' </script>";
 }
 
 ?>
