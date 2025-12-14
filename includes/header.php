@@ -34,7 +34,7 @@
 			<div class="container">
 				<div class="row justify-content-between">
 						<div class="col d-flex align-items-center">
-							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+00 1234 567</a> or <span class="mailus">email us:</span> <a href="#">emailsample@email.com</a></p>
+							<p class="mb-0 phone"><span class="mailus">Phone no:</span> <a href="#">+62 1234 567</a> or <span class="mailus">email us:</span> <a href="#">tugaswebsite108@gmail.com</a></p>
 						</div>
 						<div class="col d-flex justify-content-end">
 							<div class="social-media">
@@ -51,7 +51,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    	<a class="navbar-brand" href="index.html">Vacation<span>Rental</span></a>
+	    	<a class="navbar-brand" href="<?php echo APPURL; ?>">Vacation<span>Rental</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -71,9 +71,8 @@
 					<?php echo $_SESSION['username']; ?>
           		</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/bookings.php?id=<?php echo $_SESSION['id']; ?>">Your Bookings</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
             <li><a class="dropdown-item" href="<?php echo APPURL; ?>/auth/logout.php">Logout</a></li>
           </ul>
         </li>
