@@ -1,5 +1,13 @@
 <?php require "layouts/header.php"; ?>
-            
+<?php
+
+
+  if(!isset($_SESSION['adminname'])) {
+    echo "<script>window.location.href='".ADMINURL."/admins/login-admins.php' </script>";
+  }
+
+
+?>     
       <div class="row">
         <div class="col-md-4">
           <div class="card">
