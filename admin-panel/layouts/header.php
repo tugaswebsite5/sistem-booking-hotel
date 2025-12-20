@@ -14,7 +14,7 @@
     <title>Admin Panel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-     <link href="styles/style.css" rel="stylesheet">
+     <link href="<?php echo ADMINURL; ?>/styles/style.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
@@ -32,33 +32,33 @@
         <?php if (isset($_SESSION['adminname'])): ?>
         <ul class="navbar-nav side-nav" >
           <li class="nav-item">
-            <a class="nav-link" style="margin-left: 20px;" href="index.html">Home
+            <a class="nav-link" style="margin-left: 20px;" href="<?php echo ADMINURL; ?>">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admins/admins.html" style="margin-left: 20px;">Admins</a>
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/admins/admins.php" style="margin-left: 20px;">Admins</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hotels-admins/show-hotels.html" style="margin-left: 20px;">Hotels</a>
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/hotels-admins/show-hotels.php" style="margin-left: 20px;">Hotels</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="rooms-admins/show-rooms.html" style="margin-left: 20px;">Rooms</a>
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/rooms-admins/show-rooms.php" style="margin-left: 20px;">Rooms</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="bookings-admins/show-bookings.html" style="margin-left: 20px;">Bookings</a>
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/bookings-admins/show-bookings.php" style="margin-left: 20px;">Bookings</a>
           </li>
         </ul>
         <?php endif; ?>
         <ul class="navbar-nav ml-md-auto d-md-flex">
           <?php if (!isset($_SESSION['adminname'])): ?>
            <li class="nav-item">
-            <a class="nav-link" href="admins/login-admins.php">login
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/admins/login-admins.php">login
             </a>
           </li>
           <?php else: ?>
              <li class="nav-item">
-               <a class="nav-link" href="index.html">Home
+               <a class="nav-link" href="<?php echo ADMINURL; ?>">Home
                  <span class="sr-only">(current)</span>
               </a>
             </li>
