@@ -1,4 +1,5 @@
 <?php require "layouts/header.php"; ?>
+<?php require "../config/hconfig.php"; ?>
 <?php
 
 
@@ -7,6 +8,13 @@
   }
 
 
+  //hotel count
+
+  $hotels = $conn->query("SELECT COUNT(*) AS count_hotels FROM hotels");
+  $hotels->execute();
+
+  $allHotels = $hotels->fetch(PDO:: FETCH_OBJ);
+
 ?>     
       <div class="row">
         <div class="col-md-4">
@@ -14,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">Hotels</h5>
               <!-- <h6 class="card-subtitle mb-2 text-muted">Bootstrap 4.0.0 Snippet by pradeep330</h6> -->
-              <p class="card-text">number of hotels: 8</p>
+              <p class="card-text">number of hotels: <?php echo $allHotels->count_hotels; ?></p>
              
             </div>
           </div>
