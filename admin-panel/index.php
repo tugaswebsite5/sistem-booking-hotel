@@ -15,9 +15,32 @@
 
   $allHotels = $hotels->fetch(PDO:: FETCH_OBJ);
 
+
+  //admin count
+
+  $admins = $conn->query("SELECT COUNT(*) AS count_admins FROM admins");
+  $admins->execute();
+
+  $allAdmins = $admins->fetch(PDO:: FETCH_OBJ);
+
+
+  //rooms count
+
+  $rooms = $conn->query("SELECT COUNT(*) AS count_rooms FROM rooms");
+  $rooms->execute();
+
+  $allRooms = $rooms->fetch(PDO:: FETCH_OBJ);
+
+  //bookings count
+
+  $bookings = $conn->query("SELECT COUNT(*) AS count_bookings FROM bookings");
+  $bookings->execute();
+
+  $allBookings = $bookings->fetch(PDO:: FETCH_OBJ);
+
 ?>     
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Hotels</h5>
@@ -27,22 +50,33 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Rooms</h5>
               
-              <p class="card-text">number of rooms: 4</p>
+              <p class="card-text">number of rooms: <?php echo $allRooms->count_rooms; ?></p>
               
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Admins</h5>
               
-              <p class="card-text">number of admins: 3</p>
+              <p class="card-text">number of admins: <?php echo $allAdmins->count_admins; ?></p>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bookings</h5>
+              
+              <p class="card-text">number of bookings: <?php echo $allBookings->count_bookings; ?></p>
               
             </div>
           </div>
