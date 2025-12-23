@@ -1,7 +1,7 @@
 <?php require "../layouts/header.php"; ?>
 <?php require "../../config/config.php"; ?>
 <?php
-
+session_start();
 
 if(isset($_SESSION['adminname'])) {
   echo "<script>window.location.href='".ADMINURL."' </script>";
