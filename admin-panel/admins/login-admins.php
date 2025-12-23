@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
 
   //GET THE ROW COUNT
 
-  if($login->rowCount() > 0) {
+  if($fetch) {
 
     if(password_verify($password, $fetch['mypassword'])) {
      
