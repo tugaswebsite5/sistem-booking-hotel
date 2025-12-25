@@ -12,6 +12,7 @@
 
   $allHotels = $hotels->fetchAll(PDO::FETCH_OBJ);
 
+  
 ?> 
 
           <div class="row">
@@ -19,7 +20,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title mb-4 d-inline">Hotels</h5>
-             <a  href="create-hotels.html" class="btn btn-primary mb-4 text-center float-right">Create Hotels</a>
+             <a  href="create-hotels.php" class="btn btn-primary mb-4 text-center float-right">Create Hotels</a>
               <table class="table">
                 <thead>
                   <tr>
