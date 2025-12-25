@@ -12,7 +12,7 @@
 
   $allHotels = $hotels->fetchAll(PDO::FETCH_OBJ);
 
-  
+
 ?> 
 
           <div class="row">
@@ -42,8 +42,8 @@
                     <td><?php echo $hotel->status; ?></td>
 
                     <td><a  href="status.hotels.php?id=<?php echo $hotel->id; ?>" class="btn btn-warning text-white text-center ">status</a></td>
-                    <td><a  href="update-category.php?id=<?php echo $hotel->id; ?>" class="btn btn-warning text-white text-center ">Update </a></td>
-                    <td><a href="delete-category.php?id=<?php echo $hotel->id; ?>" class="btn btn-danger  text-center ">Delete </a></td>
+                    <td><a  href="update-hotels.php?id=<?php echo $hotel->id; ?>" class="btn btn-warning text-white text-center ">Update </a></td>
+                    <td><a href="delete-hotels.php?id=<?php echo $hotel->id; ?>" class="btn btn-danger  text-center ">Delete </a></td>
                   </tr>
                   <?php endforeach; ?>
                  
