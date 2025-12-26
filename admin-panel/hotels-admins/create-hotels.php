@@ -41,6 +41,7 @@ if(isset($_POST['submit'])) {
 
 
 ?>
+
        <div class="row">
         <div class="col">
           <div class="card">
