@@ -50,7 +50,7 @@
                     <td><?php echo $room->hotel_name; ?></td>
                     <td><?php echo $room->status; ?></td>
 
-                    <td><a href="status-rooms.php?id=<?php echo $room->id; ?>" class="btn btn-danger  text-center ">status</a></td>
+                    <td><a href="status-rooms.php?id=<?php echo $room->id; ?>" class="btn btn-warning text-white  text-center ">status</a></td>
                     <td><a href="delete-rooms.php?id=<?php echo $room->id; ?>" class="btn btn-danger  text-center ">Delete</a></td>
                   </tr>
                  <?php endforeach; ?>
