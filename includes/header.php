@@ -2,8 +2,8 @@
 
 	session_start();
     define("APPURL", "http://localhost/sistem-booking-hotel");
-
-
+	define("HOTELSIMAGES", "http://localhost/sistem-booking-hotel/admin-panel/hotels-admins/hotel_images");
+	define("ROOMSIMAGES", "http://localhost/sistem-booking-hotel/admin-panel/rooms-admins/room_images");
 ?>
 <!DOCTYPE html>
 <html lang="en">
