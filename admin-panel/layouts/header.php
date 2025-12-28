@@ -5,7 +5,6 @@
 
     define("ADMINURL","http://localhost/sistem-booking-hotel/admin-panel");
 
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
